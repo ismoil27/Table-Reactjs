@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    height: 300px;
+    width: 100%;
+    max-height: 98vh;
+    overflow: auto;
+}
+.email--table{
+    padding: 0 50px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 800px;
+    border: 2px solid #ddd;
+    font-size: 125%;
+    margin: 0;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    /* table-layout: fixed; */
+}
+table th{
+    padding: 3px;
+    padding: 1rem 1rem;
+    text-align: left;
+    height: 40px;
+    position: sticky;
+    top: 0;
+    background: #eee;
+}
+table td{
+    padding: 1rem 1rem;
+    background: #fff;
+    text-align: left;
+}
+table tbody th{
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 1;
+}
+table thead th:first-child{
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+input {
+    margin: 20px;
+    padding: 10px 20px;
+}
+button{
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+
+
+/* * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    background-color: whitesmoke;
+}
+input{
+    margin-right: 10px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.cards{
+    display: flex;
+}
+.contact-card {
+    flex-basis: 225px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    background-color: white;
+}
+
+.contact-card > img {
+    width: 100%;
+    height: auto;
+    align-self: center;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.contact-card > h3 {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+}
+
+.info-group > img {
+    height: 11px;
+    margin-right: 8px;
+}
+
+.info-group > p {
+    margin-block: 3px;
+    font-size: 12px;
+    color: #2B283A;
+}
+@media (max-width: 600px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-card {
+        margin-bottom: 15px;
+    }
+} */
