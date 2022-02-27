@@ -6,7 +6,7 @@ export const TableMethod = () => {
   const [contact, setContact] = useState(data);
   const [addForm, setaddFrom] = useState({
     name: "",
-    street: "",
+    address: "",
     phone: "",
     email: "",
   });
@@ -29,7 +29,7 @@ export const TableMethod = () => {
     const newContact = {
       id: contact.length + 1,
       name: addForm.name,
-      address: addForm.street,
+      address: addForm.address,
       phone: addForm.phone,
       email: addForm.email,
     };
@@ -50,10 +50,10 @@ export const TableMethod = () => {
           </tr>
         </thead>
         <tbody>
-          {contact.map(({ id, name, street, phone, email }) => (
+          {contact.map(({ id, name, address, phone, email }) => (
             <tr key={id}>
               <td>{name}</td>
-              <td>{street}</td>
+              <td>{address}</td>
               <td>{phone}</td>
               <td>{email}</td>
             </tr>
@@ -72,7 +72,7 @@ export const TableMethod = () => {
         />
         <input
           type="text"
-          name="street"
+          name="address"
           id=""
           required
           placeholder="Enter an address"
