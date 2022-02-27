@@ -1,10 +1,10 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 div{
-    height: 300px;
+    height: 500px;
     width: 100%;
     max-height: 98vh;
     overflow: auto;
@@ -22,7 +22,7 @@ table{
     border: none;
     border-collapse: separate;
     border-spacing: 0;
-    /* table-layout: fixed; */
+    
 }
 table th{
     padding: 3px;
@@ -55,14 +55,7 @@ input {
 }
 button{
     padding: 10px 20px;
-}
-
-
-
-
-
-
-
+} */
 
 /* * {
     box-sizing: border-box;

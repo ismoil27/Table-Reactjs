@@ -11,7 +11,9 @@ export default class Table extends Component {
         this.state = {
             data: student,
             name: '',
-            status: ''
+            status: '',
+            option: 'id'
+
         }
     }
 
@@ -22,7 +24,8 @@ export default class Table extends Component {
             this.setState({data: res})
         }
             const onFilter = (e) => {
-                let filter = student.filter(value => value.name.toLowerCase().includes(e.target.value.toLowerCase()))
+                let filter = student.filter(value => 
+                    String(value[this.state.option]).toLowerCase().includes(e.target.value.toLowerCase()))
                 this.setState({data: filter})
             }
             const onAdd = e => {
@@ -37,12 +40,16 @@ export default class Table extends Component {
                 })
             }  
 
+            const onSelectValue = e => {
+                this.setState({option: e.target.value})
+            }
+
         return (
             <div>
-                <select name="selection" id="">
-                <option value="Id">ID</option>
-                <option value="Status">Status</option>
-                <option value="Id">Name</option>
+                <select name="selection" id="" onChange={onSelectValue}>
+                <option value="id">ID</option>
+                <option value="status">Status</option>
+                <option value="name">Name</option>
                 </select>
                 <input type="text" onChange={onFilter} />
                 <table border={1} >
@@ -71,8 +78,9 @@ export default class Table extends Component {
                                    <td>{value.age}</td>
                                    <td>{value.email}</td>
                                    <td>{value.address}</td>
-                                   <td>
+                                   <td className="action--table">
                                        <button onClick={() => onDelete(value.id)} >Delete</button>
+                                       <button>Edit</button>
                                     </td>
                                </tr>
                                 ); 
