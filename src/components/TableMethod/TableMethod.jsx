@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./table.css";
 import data from "./fake-data.json";
+import { TableRow } from "./TableRow";
 
 export const TableMethod = () => {
   const [contact, setContact] = useState(data);
@@ -43,6 +44,7 @@ export const TableMethod = () => {
       <table>
         <thead>
           <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Address</th>
             <th>Phone Number</th>
@@ -50,13 +52,8 @@ export const TableMethod = () => {
           </tr>
         </thead>
         <tbody>
-          {contact.map(({ id, name, address, phone, email }) => (
-            <tr key={id}>
-              <td>{name}</td>
-              <td>{address}</td>
-              <td>{phone}</td>
-              <td>{email}</td>
-            </tr>
+          {contact.map((contact) => (
+            <TableRow contact={contact} />
           ))}
         </tbody>
       </table>
